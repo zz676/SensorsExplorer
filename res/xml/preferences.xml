@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="@string/pref_notifications" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="pref_notify_fix"
+            android:summary="@string/pref_notify_summary"
+            android:title="@string/pref_notify" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="pref_notify_search"
+            android:summary="@string/pref_search_summary"
+            android:title="@string/pref_search" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="pref_agps"
+        android:title="@string/pref_agps" >
+        <edu.nyu.zhisheng.sensorsexplorer.widgets.NetworkTypePreference
+            android:key="pref_update_networks"
+            android:summary="@string/pref_networks_summary"
+            android:title="@string/pref_networks" />
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/prefs_freq_keys"
+            android:entryValues="@array/prefs_freq_values"
+            android:key="pref_update_freq"
+            android:summary="%s"
+            android:title="@string/pref_freq" />
+
+        <Preference
+            android:defaultValue="0"
+            android:key="pref_update_last"
+            android:title="@string/pref_lastupdate" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
