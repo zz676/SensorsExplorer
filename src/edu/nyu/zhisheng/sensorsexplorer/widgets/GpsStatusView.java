@@ -60,7 +60,7 @@ public class GpsStatusView extends SquareView {
 
 	private void doInit() {
 		activePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-		activePaint.setColor(Color.parseColor("#FF33B5E5"));
+		activePaint.setColor(Color.parseColor("#FF00FF00"));
 		activePaint.setStyle(Paint.Style.FILL);
 
 		inactivePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
@@ -68,12 +68,12 @@ public class GpsStatusView extends SquareView {
 		inactivePaint.setStyle(Paint.Style.FILL);
 
 		gridPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-		gridPaint.setColor(Color.parseColor("#FFFF8800"));
+		gridPaint.setColor(Color.parseColor("#FF57068C"));
 		gridPaint.setStyle(Paint.Style.STROKE);
 		gridPaint.setStrokeWidth(gridStrokeWidth);
 
 		gridBorderPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-		gridBorderPaint.setColor(Color.parseColor("#50FF8800"));
+		gridBorderPaint.setColor(Color.parseColor("#5057068C"));
 		gridBorderPaint.setStyle(Paint.Style.STROKE);
 
 		northPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
@@ -81,7 +81,7 @@ public class GpsStatusView extends SquareView {
 		northPaint.setStyle(Paint.Style.FILL);
 
 		labelPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-		labelPaint.setColor(Color.parseColor("#FFFF8800"));
+		labelPaint.setColor(Color.parseColor("#FF57068C"));
 		labelPaint.setStyle(Paint.Style.FILL);
 		labelPaint.setTextAlign(Paint.Align.CENTER);
 	}

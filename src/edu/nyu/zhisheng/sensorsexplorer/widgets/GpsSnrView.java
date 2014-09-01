@@ -62,7 +62,7 @@ public class GpsSnrView extends View {
 
 	private void doInit() {
 		activePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-		activePaint.setColor(Color.parseColor("#FF33B5E5"));
+		activePaint.setColor(Color.parseColor("#FF00FF00"));
 		activePaint.setStyle(Paint.Style.FILL);
 
 		inactivePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
