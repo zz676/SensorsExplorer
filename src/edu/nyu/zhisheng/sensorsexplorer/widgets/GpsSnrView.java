@@ -26,7 +26,7 @@ public class GpsSnrView extends View {
 	private Paint gridPaintStrong;
 
 	// FIXME: should be DPI-dependent, this is OK for MDPI
-	private int gridStrokeWidth = 2;
+	private int gridStrokeWidth = 3;
 
 	// Which satellites to draw
 	private boolean draw32 = true; // 01-32 (GPS satellites)
@@ -62,7 +62,7 @@ public class GpsSnrView extends View {
 
 	private void doInit() {
 		activePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-		activePaint.setColor(Color.parseColor("#FF00FF00"));
+		activePaint.setColor(Color.parseColor("#FF33B5E5"));
 		activePaint.setStyle(Paint.Style.FILL);
 
 		inactivePaint = new Paint(Paint.ANTI_ALIAS_FLAG);

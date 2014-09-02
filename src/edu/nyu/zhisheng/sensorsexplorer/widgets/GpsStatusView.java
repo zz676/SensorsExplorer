@@ -35,8 +35,8 @@ public class GpsStatusView extends SquareView {
 	private Path labelPathW = new Path();
 
 	// FIXME: these two should be DPI-dependent, this is OK for MDPI
-	private int gridStrokeWidth = 2;
-	private float snrScale = 0.2f;
+	private int gridStrokeWidth = 3;
+	private float snrScale = 0.4f;
 
 	// Compensation for display rotation. Use Surface.ROTATION_* as index (0,
 	// 90, 180, 270 deg).
@@ -60,7 +60,7 @@ public class GpsStatusView extends SquareView {
 
 	private void doInit() {
 		activePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-		activePaint.setColor(Color.parseColor("#FF00FF00"));
+		activePaint.setColor(Color.parseColor("#FF33B5E5"));
 		activePaint.setStyle(Paint.Style.FILL);
 
 		inactivePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
@@ -77,7 +77,7 @@ public class GpsStatusView extends SquareView {
 		gridBorderPaint.setStyle(Paint.Style.STROKE);
 
 		northPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-		northPaint.setColor(Color.parseColor("#FFCC0000"));
+		northPaint.setColor(Color.parseColor("#FFFF0000"));
 		northPaint.setStyle(Paint.Style.FILL);
 
 		labelPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
