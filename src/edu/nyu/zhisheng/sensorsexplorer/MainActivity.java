@@ -69,9 +69,6 @@ import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
-
-import edu.nyu.zhisheng.sensorsexplorer.R;
-
 import edu.nyu.zhisheng.sensorsexplorer.widgets.GpsSnrView;
 import edu.nyu.zhisheng.sensorsexplorer.widgets.GpsStatusView;
 
@@ -81,7 +78,7 @@ public class MainActivity extends FragmentActivity implements
 
 	/**
 	 * The {@link android.support.v4.view.PagerAdapter} that will provide
-	 * fragments for each of the sections. We use a
+	 * fragments for each of the sections. I use a
 	 * {@link android.support.v4.app.FragmentPagerAdapter} derivative, which
 	 * will keep every loaded fragment in memory. If this becomes too memory
 	 * intensive, it may be best to switch to a
@@ -94,7 +91,7 @@ public class MainActivity extends FragmentActivity implements
 	 */
 	ViewPager mViewPager;
 
-	// The rate in microseconds at which we would like to receive updates from
+	// The rate in microseconds at which I would like to receive updates from
 	// the sensors.
 	// private static final int iSensorRate = SensorManager.SENSOR_DELAY_UI;
 	private static final int iSensorRate = 200000; // Default is 20,000 for
@@ -467,19 +464,6 @@ public class MainActivity extends FragmentActivity implements
 		wifiLayout.addView(wifiDetails);
 		wifiLayout.setOnClickListener(clis);
 		wifiAps.addView(wifiLayout);
-
-		/*
-		 * TableRow row3 = new TableRow(wifiAps.getContext()); TextView newCaps
-		 * = new TextView(wifiAps.getContext()); newCaps.setLayoutParams(new
-		 * TableRow.LayoutParams(0, LayoutParams.WRAP_CONTENT, 19));
-		 * newCaps.setTextAppearance(wifiAps.getContext(),
-		 * android.R.style.TextAppearance_Small);
-		 * newCaps.setText(WifiCapabilities.getScanResultSecurity(result));
-		 * //newCaps.setText(result.capabilities); row3.addView(newCaps);
-		 * row3.setOnClickListener(clis); wifiAps.addView(row3, new
-		 * TableLayout.LayoutParams(LayoutParams.WRAP_CONTENT,
-		 * LayoutParams.WRAP_CONTENT));
-		 */
 	}
 
 	private final void refreshWifiResults() {
@@ -892,6 +876,7 @@ public class MainActivity extends FragmentActivity implements
 	/**
 	 * Called when a sensor's reading changes. Updates sensor display.
 	 */
+	@Override
 	public void onSensorChanged(SensorEvent event) {
 		// to enforce sensor rate
 		boolean isRateElapsed = false;

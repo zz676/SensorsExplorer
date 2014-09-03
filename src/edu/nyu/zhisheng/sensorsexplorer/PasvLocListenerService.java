@@ -79,7 +79,7 @@ public class PasvLocListenerService extends Service implements
 
 	@Override
 	public void onCreate() {
-		super.onCreate(); // do we need that here?
+		super.onCreate(); 
 
 		mLocationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 		mSharedPreferences = PreferenceManager

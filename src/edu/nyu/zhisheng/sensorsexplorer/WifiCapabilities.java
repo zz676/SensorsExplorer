@@ -118,7 +118,7 @@ public abstract class WifiCapabilities {
 			urlConnection.setReadTimeout(SOCKET_TIMEOUT_MS);
 			urlConnection.setUseCaches(false);
 			urlConnection.getInputStream();
-			// we got a valid response, but not from the real google
+			// I got a valid response, but not from the real google
 			return (urlConnection.getResponseCode() != 204) ? NETWORK_CAPTIVE_PORTAL
 					: NETWORK_AVAILABLE;
 		} catch (IOException e) {

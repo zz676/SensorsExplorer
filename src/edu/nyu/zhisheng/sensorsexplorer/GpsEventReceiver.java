@@ -29,8 +29,6 @@ public class GpsEventReceiver extends BroadcastReceiver {
 
 	public static final String GPS_ENABLED_CHANGE = "android.location.GPS_ENABLED_CHANGE";
 	public static final String GPS_FIX_CHANGE = "android.location.GPS_FIX_CHANGE";
-	// public static final String AGPS_DATA_EXPIRED =
-	// "com.vonglasow.michael.satstat.AGPS_DATA_EXPIRED";
 	public static final String AGPS_DATA_EXPIRED = "edu.nyu.zhisheng.sensorsexplorer.AGPS_DATA_EXPIRED";
 	public static final long MILLIS_PER_DAY = 86400000;
 
@@ -54,7 +52,7 @@ public class GpsEventReceiver extends BroadcastReceiver {
 
 		if (intent.getAction().equals(GPS_ENABLED_CHANGE)
 				|| intent.getAction().equals(GPS_ENABLED_CHANGE)) {
-			// FIXME: why are we checking for the same intent twice? Should on
+			// FIXME: why checking for the same intent twice? Should one
 			// of them be GPS_FIX_CHANGE?
 			// an application has connected to GPS or disconnected from it,
 			// check if notification needs updating
