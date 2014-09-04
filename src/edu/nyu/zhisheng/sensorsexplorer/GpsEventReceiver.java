@@ -166,10 +166,6 @@ public class GpsEventReceiver extends BroadcastReceiver {
 		long now = System.currentTimeMillis();
 		if (enforceInterval && (last + freqDays * MILLIS_PER_DAY > now))
 			return;
-		// Log.d(GpsEventReceiver.class.getSimpleName(),
-		// String.format("refreshAgps, enforceInterval: %b, wantFeedback: %b",
-		// enforceInterval, wantFeedback));
-
 		new AgpsUpdateTask(wantFeedback).execute(context, mAgpsIntent,
 				sharedPref, freqDays * MILLIS_PER_DAY);
 	}
@@ -207,7 +203,6 @@ public class GpsEventReceiver extends BroadcastReceiver {
 
 			int nc = WifiCapabilities.getNetworkConnectivity();
 			if (nc == WifiCapabilities.NETWORK_CAPTIVE_PORTAL) {
-				// portale cattivo che non ci permette di scaricare i dati AGPS
 				Log.i(GpsEventReceiver.class.getSimpleName(),
 						"Captive portal detected, cannot update AGPS data");
 				return nc;

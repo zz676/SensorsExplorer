@@ -876,6 +876,7 @@ public class MainActivity extends FragmentActivity implements
 	/**
 	 * Called when a sensor's reading changes. Updates sensor display.
 	 */
+	@SuppressWarnings("deprecation")
 	@Override
 	public void onSensorChanged(SensorEvent event) {
 		// to enforce sensor rate
@@ -1239,8 +1240,6 @@ public class MainActivity extends FragmentActivity implements
 		}
 	}
 
-	// FIXME: don't repeat active cell in list (we're already displaying it
-	// above)
 	/**
 	 * Updates the list of cells in range. Called after explicitly getting a
 	 * list of neighboring cells by calling
